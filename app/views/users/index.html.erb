@@ -6,24 +6,16 @@
   <h1>Listing users</h1>
 </div>
 
-<table class="datatable table table-striped">
+<table id="users-dt" class="datatable table table-striped" data-source="<%= users_path(format: :json) %>">
   <thead>
     <tr>
       <th>Name</th>
       <th>Surname</th>
-      <th>Full name</th>
       <th>Username</th>
       <th>Email</th>
     </tr>
   </thead>
 
   <tbody>
-    <%= content_tag_for(:tr, @users) do |user| %>
-      <td><%= user.name %></td>
-      <td><%= user.surname %></td>
-      <td><%= user.full_name %></td>
-      <td><%= user.username %></td>
-      <td><%= user.email %></td>
-    <% end %>
   </tbody>
 </table>

@@ -16,6 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'jquery-datatables-rails', '~> 3.3.0'
 gem 'ajax-datatables-rails'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'
