@@ -14,22 +14,16 @@
       <th>Full name</th>
       <th>Username</th>
       <th>Email</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <%= content_tag_for(:tr, @users) do |user| %>
-          <td><%= user.name %></td>
-          <td><%= user.surname %></td>
-          <td><%= user.full_name %></td>
-          <td><%= user.username %></td>
-          <td><%= user.email %></td>
-          <td><%= link_to 'Show', user %></td>
-      <td><%= link_to 'Edit', edit_user_path(user) %></td>
-      <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= user.name %></td>
+      <td><%= user.surname %></td>
+      <td><%= user.full_name %></td>
+      <td><%= user.username %></td>
+      <td><%= user.email %></td>
     <% end %>
   </tbody>
 </table>
