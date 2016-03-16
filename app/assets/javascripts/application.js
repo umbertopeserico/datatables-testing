@@ -15,4 +15,11 @@
 //= require dataTables/jquery.dataTables
 //= require dataTables/bootstrap/3/jquery.dataTables.bootstrap.js
 //= require bootstrap
-//= require_tree .
+//= require bootstrap-select/bootstrap-select.min
+//= require users
+
+$(function() {
+  $(".dataTables_length select").selectpicker({
+    width: "80px"
+  });
+});
