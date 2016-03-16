@@ -6,6 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-1000.times.each() do |i|
-  User.create(name:"User Name #{i}", surname: "User Surname", email:"user#{i}@foo.it", username:"user#{i}")
+30000.times.each() do |i|
+  name = FFaker::Name.first_name
+  surname = FFaker::Name.last_name
+  username = "#{name.downcase}.#{surname.downcase}"
+  domain = FFaker::InternetSE.domain_name
+  User.create(name: name, surname: surname, email:"#{username}@#{domain}", username:username)
 end
